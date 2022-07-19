@@ -1,0 +1,26 @@
+<configuration>
+    <appender name="mySTDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%date{yyyy-MM-dd HH:mm:ss.SSS} 【%thread】 %-5level %logger{35} - %msg %n</pattern>
+        </encoder>
+    </appender>
+    <!--
+    appender 日志输出到哪里 ConsoleAppender 表示命令行
+    -->
+    <appender name="myFILE" class="ch.qos.logback.core.FileAppender">
+        <file>E:/Code/logs/mytest2.log</file>
+        <encoder>
+            <pattern>%date{yyyy-MM-dd HH:mm:ss.SSS} 【%thread】 %-5level %logger{35} -  %msg %n</pattern>
+        </encoder>
+    </appender>
+    <!--
+       appender 日志输出到哪里  file 输出到文件
+       -->
+    <root level="info">
+        <appender-ref ref="mySTDOUT"></appender-ref>
+        <appender-ref ref="myFILE"></appender-ref>
+    </root>
+    <!--
+   指定输出级别 trace及以上
+   -->
+</configuration>

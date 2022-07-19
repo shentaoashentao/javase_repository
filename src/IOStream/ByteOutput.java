@@ -6,7 +6,7 @@ import java.io.IOException;
 public class ByteOutput {
     public static void main(String[] args) throws IOException {
         //文件不存在会自己创 文件存在会把文件清空再写
-        FileOutputStream fileOutputStream = new FileOutputStream("E:\\Code\\02\\Project\\javase\\a.txt");
+        FileOutputStream fileOutputStream = new FileOutputStream("E:\\Code\\02\\Project\\javase\\a.txt",true);
        // fileOutputStream.write(100);//写的是100对应的字符“d”
 
         //byte[] bytes={98,99,100,101,102};//一次性写多个时 写进数组

@@ -47,12 +47,17 @@ public class JDBCUtils {
         PreparedStatement preparedStatement = null;
         try {
             preparedStatement = connection.prepareStatement(sql);
+
             if(params != null){
                 for (int i = 0; i < params.length; i++) {
                     preparedStatement.setObject(i+1,params[i]);//设置参数放值  params[i]指的是对应？设置的值
                 }
             }
-            return preparedStatement.executeUpdate();//设置完值以后 执行sql 出来的是行数
+            int i = preparedStatement.executeUpdate();
+            int a = 3/0;
+            return i ;//设置完值以后 执行sql 出来的是行数
+
+
         } catch (SQLException e) {
             e.printStackTrace();
         }

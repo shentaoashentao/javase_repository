@@ -1,4 +1,4 @@
-package Net;
+package Net.UDP;
 
 import javax.imageio.IIOException;
 import java.io.IOException;

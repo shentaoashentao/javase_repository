@@ -7,7 +7,7 @@ import java.lang.String;
 @Getter
 @Setter
 //@Data   //data包括@Getter@Setter@ToString@EqualsAndHashCode@RequiredArgsConstructor
-@EqualsAndHashCode//重写squals方法 用来判断对象的值是否相等  而不是判断对象的引用地址是否相等
+@EqualsAndHashCode(exclude = "name")//重写squals方法 用来判断对象的值是否相等  而不是判断对象的引用地址是否相等
 @ToString
 @Slf4j
 @AllArgsConstructor//构造所有参数的
@@ -16,10 +16,11 @@ import java.lang.String;
 //@Value    所有都设置成final
 public class User {
 
-    private final int  id;//final 表示必须
+    private  int  id;//final 表示必须
     private  String name;
+    private double money;
 
     public void mylog(){
-
+        log.error("测试");
     }
 }

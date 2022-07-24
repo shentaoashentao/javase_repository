@@ -5,7 +5,8 @@ import java.sql.*;
 //添加 inser into
 public class JDBC_Add {
     public static void main(String[] args) throws Exception  {
-        String url="jdbc:mysql://127.0.0.1:3306/db01?useSSL=false";
+        Class.forName("com.mysql.jdbc.Driver");
+        String url="jdbc:mysql://127.0.0.1:3306/db01?useSSL=false&Unicode=true&characterEncoding=utf8";
         String username="root";
         String password="root";
         Connection connection = DriverManager.getConnection(url,username,password);

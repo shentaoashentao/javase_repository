@@ -12,6 +12,8 @@ public class SendUDP {
     public static void main(String[] args) throws  IOException {
         //创建发送端对象
         DatagramSocket ds = new DatagramSocket();
+
+
         //创建数据 打包
         //DatagramPacket(byte[] buf, int length,InetAddress address,int port)
         //构造一个数据包 发送   长度为length   的数据包到     指定主机    上的    指定端口号
@@ -24,7 +26,6 @@ public class SendUDP {
         //调用DatagramSocket对象的方法发送数据
         //void send(DatagramSocket p)
         ds.send(dp);
-
         //关闭发送端
         ds.close();
     }

@@ -5,7 +5,7 @@
         </encoder>
     </appender>
     <!--
-    appender 日志输出到哪里 ConsoleAppender 表示命令行
+    Consoleappender 日志输出到哪里 ConsoleAppender 表示命令行
     -->
     <appender name="myFILE" class="ch.qos.logback.core.FileAppender">
         <file>E:/Code/logs/mytest2.log</file>
@@ -14,7 +14,7 @@
         </encoder>
     </appender>
     <!--
-       appender 日志输出到哪里  file 输出到文件
+       Fileappender 日志输出到哪里  file 输出到文件
        -->
     <root level="info">
         <appender-ref ref="mySTDOUT"></appender-ref>

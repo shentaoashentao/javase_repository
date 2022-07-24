@@ -17,12 +17,12 @@ public class ServerTCP {
 
         //获取输入流 读数据 把数据显示在控制台
         InputStream is = s.getInputStream();
-
+        //字节流读数据
         byte[] bytes = new byte[1024];
         int len = is.read(bytes);
+        //把数据转换为字符串
         String data = new String(bytes,0,len);
         System.out.println("数据是："+data);
-
 
         s.close();;
         ss.close();
